@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔镜</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .option {
+            margin: 0 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .option:hover {
+            background-color: #ddd;
+        }
+        .image-container {
+            margin-top: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>我是魔镜，你想知道世界上最漂亮的女人是谁吗？</h1>
+    <div class="options">
+        <div class="option" id="yes">是的</div>
+        <div class="option" id="no">不想</div>
+    </div>
+    <div class="image-container" id="imageContainer"></div>
+
+    <script>
+        const yesButton = document.getElementById('yes');
+        const noButton = document.getElementById('no');
+        const imageContainer = document.getElementById('imageContainer');
+
+        yesButton.addEventListener('click', () => {
+            imageContainer.innerHTML = '<img src="meinv.gif" alt="世界上最漂亮的女人">';
+        });
+
+        noButton.addEventListener('click', () => {
+            imageContainer.innerHTML = '<img src="xiaolanzi.gif" alt="魔鬼">';
+        });
+    </script>
+</body>
+</html>
